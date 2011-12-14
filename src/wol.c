@@ -33,7 +33,7 @@
 
 #define ARGS_BUF_MAX       128
 
-#define USAGE              "Usage: %s [-f filename1, ...|mac1, ...]\n" 
+#define USAGE              "Usage: %s -r remoteaddr [-f filename1, ...|mac1, ...]\n" 
 
 /* Test MAC Addr: 00:0B:CD:39:2D:E9 */
 
@@ -52,7 +52,7 @@ typedef struct {
 *
 * @return integer
 */
-int sendWOL( const mac_addr_t *mac );
+int sendWOL( const mac_addr_t *mac, const char *remoteaddr );
 
 /**
 * @brief Gets the next mac address from the terminal arguments
